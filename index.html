@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The 1 Condo - ระบบแจ้งเตือน</title>
+    <link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏢 The 1 Condo</h1>
+            <p>ระบบจัดการแจ้งเตือนอัจฉริยะ</p>
+        </div>
+
+        <div class="main-content">
+            <div class="dashboard">
+                <h2>🎛️ ควบคุมระบบแจ้งเตือน</h2>
+                
+                <div class="control-buttons">
+                    <button class="btn btn-primary" onclick="sendUrgentNotification()">
+                        🚨 แจ้งเตือนด่วน
+                    </button>
+                    <button class="btn btn-secondary" onclick="sendMaintenanceNotification()">
+                        🔧 แจ้งบำรุงรักษา
+                    </button>
+                    <button class="btn btn-success" onclick="sendPaymentNotification()">
+                        💰 แจ้งชำระเงิน
+                    </button>
+                    <button class="btn btn-warning" onclick="sendGeneralNotification()">
+                        📢 ประกาศทั่วไป
+                    </button>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number" id="totalNotifications">0</div>
+                        <div>แจ้งเตือนทั้งหมด</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="activeResidents">247</div>
+                        <div>ผู้อาศัยทั้งหมด</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="unreadCount">0</div>
+                        <div>ยังไม่ได้อ่าน</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="onlineUsers">89</div>
+                        <div>ออนไลน์ขณะนี้</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="notification-panel">
+                <div class="panel-header">
+                    🔔 แจ้งเตือนล่าสุด
+                    <div class="notification-badge" id="notificationBadge">0</div>
+                </div>
+                <div class="notifications-list" id="notificationsList">
+                    <div style="text-align: center; padding: 50px; color: #6c757d;">
+                        📱 ยังไม่มีการแจ้งเตือน<br>
+                        <small>กดปุ่มด้านซ้ายเพื่อส่งการแจ้งเตือนทดสอบ</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/index.js"></script>
+</body>
+</html>
