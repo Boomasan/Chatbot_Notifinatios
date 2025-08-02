@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ระบบแจ้งเตือนและประชาสัมพันธ์</title>
+    <link rel="stylesheet" href="/uesr/user.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔔 การแจ้งเตือน</h1>
+            <div class="notification-count">
+                ใหม่: <span id="unreadCount">0</span>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button class="filter-btn active" data-filter="all">ทั้งหมด</button>
+            <button class="filter-btn" data-filter="unread">ยังไม่อ่าน</button>
+            <button class="filter-btn" data-filter="read">อ่านแล้ว</button>
+            <button class="action-btn" onclick="markAllAsRead()">อ่านทั้งหมด</button>
+            <button class="action-btn" onclick="loadNotifications()">รีเฟรช</button>
+        </div>
+
+        <div class="notifications-container" id="notificationsContainer">
+            <div class="empty-state">
+                <div style="font-size: 3em; margin-bottom: 15px;">📭</div>
+                <h3>ไม่มีการแจ้งเตือน</h3>
+                <p>คุณไม่มีการแจ้งเตือนในขณะนี้</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- แจ้งเตือนใหม่ -->
+    <div class="new-notification-alert" id="newNotificationAlert">
+        🔔 มีการแจ้งเตือนใหม่!
+    </div>
+
+    <script src="/uesr/user.js"></script>
+</body>
+</html>
